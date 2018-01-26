@@ -1,0 +1,40 @@
+@import "~milligram/src/milligram";
+
+body,
+html,
+[data-react-root],
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+code {
+  display: block;
+  white-space: pre-wrap;
+}
+
+#app {
+  margin: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+}
+
+.row {
+  height: 100%;
+}
+
+.column {
+  height: 100%;
+
+  & > code {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+  }
+}
+
+[error] > code {
+  border: 1px solid red;
+  background: rgba(255, 153, 153, 0.20);
+}
