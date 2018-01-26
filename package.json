@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prebuild": "cp src/index.html index.html",
     "build": "node ./node_modules/webpack/bin/webpack.js",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
