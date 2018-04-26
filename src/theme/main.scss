@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro');
+
+@import 'globals';
+@import 'typography';
+@import 'grid';
+
+.app, {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  height: 100vh;
+}
+
+[data-react-root] {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  
+  flex: 1;
+}
+
+.col {
+  position: relative;
+  
+  border-width: 0;
+  border-style: solid;
+  border-color: #eee;
+
+  padding: .5rem;
+
+  &:first-child{
+    border-right-width: 1px;
+  }
+  
+  &:last-child{
+    border-left-width: 1px;
+  }
+
+  code {
+    position: absolute;
+    top: 2rem;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    padding-bottom: calc(2rem - 2px);
+    overflow: auto;
+
+    &:focus {
+      outline: 2px solid orange;
+    }
+  }
+
+  .error {
+    position: absolute;
+    bottom: -2rem; left: 0;
+    width: 100%;
+    padding: 0 .5rem;
+    
+    font-size: .75rem;
+    line-height: 2rem;
+
+    background-color: rgb(255, 103, 1);
+    color: white;
+
+    transition: bottom 250ms ease-in-out;
+
+    &.in {
+      bottom: 0;
+    }
+  }
+}
+
+header {
+  border-bottom: 1px solid #eee;
+  padding: 0 2rem;
+}
+
+footer {
+  border-top: 1px solid #eee;
+
+  .copy {
+    color: #333;
+    font-size: .75rem;
+    text-align: center;
+  }
+}

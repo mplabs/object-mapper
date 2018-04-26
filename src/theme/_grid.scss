@@ -1,0 +1,16 @@
+.grid {
+  display: flex;
+  flex: 1;
+}
+
+.grid.thirds {
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+}
+
+.grid.thirds .col {
+  width: 32%;
+}
