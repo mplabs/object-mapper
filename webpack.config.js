@@ -3,11 +3,10 @@ module.exports = {
   entry: [
     "@babel/polyfill",
     "./src/theme/main.scss",
-    "./src/main",
-    process.env.MODE === 'development' ? 'webpack-dev-server/client?http://localhost:1337' : ''
+    "./src/main"
   ],
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/`,
     publicPath: "/",
     filename: "bundle.min.js"
   },
